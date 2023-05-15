@@ -37,7 +37,7 @@
 		>
 			{#if toast?.component || component}
 				{@const { component, ...props } = toast}
-				<svelte:component this={toast?.component[0] || component} {...props} />
+				<svelte:component this={toast?.component?.[0] || component} {...props} />
 			{:else}
 				<Toast {toast} />
 			{/if}
